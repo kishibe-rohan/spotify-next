@@ -6,6 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      body: ['Raleway', 'serif'],
+      sans: ['ui-sans-serif', 'system-ui'],
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/forms'),
+    require('tailwind-scrollbar'),
+  ],
 }
