@@ -10,7 +10,6 @@ const Home = () => {
         <title>Spotify - Next</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Dashboard />
     </div>
   )

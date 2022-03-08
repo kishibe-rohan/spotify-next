@@ -5,11 +5,16 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {} /*
     fontFamily: {
       body: ['Raleway', 'serif'],
       sans: ['ui-sans-serif', 'system-ui'],
     },
+    */,
+  },
+  variants: {
+    extend: {},
+    scrollbar: ['rounded'],
   },
   plugins: [
     require('tailwind-scrollbar-hide'),
