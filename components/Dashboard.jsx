@@ -10,10 +10,10 @@ const spotifyApi = new SpotifyWebApi({
 
 function Dashboard() {
   return (
-    <main>
+    <main className="flex min-h-screen min-w-max bg-black lg:pb-24">
      <Sidebar/>
      <Feed spotifyApi={spotifyApi}/>
-     <Rightbar/>
+     <Rightbar spotifyApi={spotifyApi}/>
     </main>
   )
 }
