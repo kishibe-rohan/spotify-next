@@ -7,6 +7,7 @@ import { BiBell } from "react-icons/bi";
 import { ViewGridIcon } from "@heroicons/react/solid";
 
 import Profile from './Profile'
+import RecentlyPlayed from './RecentlyPlayed'
 
 const Rightbar = ({spotifyApi}) => {
 
@@ -49,7 +50,23 @@ const Rightbar = ({spotifyApi}) => {
       </div>
 
       {/* Recently Played */}
-      
+      <div className="bg-[#0D0D0D] border-2 border-[#262626] p-4 rounded-xl space-y-4 ">
+        <div className="flex items-center justify-between">
+          <h4 className="text-white font-semibold text-sm">Recently Played</h4>
+          <ViewGridIcon className="text-[#686868] h-6" />
+        </div>
+
+        <div className="space-y-4 overflow-y-scroll overflow-x-hidden h-[250px] md:h-[400px] scrollbar-hide">
+        {
+          recentlyPlayed.map((track,index) => (
+            <RecentlyPlayed key={index} track={track}/>
+          ))
+        }
+        </div>
+        <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full dont-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">
+          View All
+        </button>
+      </div>
     </section>
   )
 }
